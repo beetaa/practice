@@ -1,0 +1,81 @@
+//- 注释
+
+// 带输出的单行注释：和 JavaScript 的单行注释类似，必须独立一行。
+//- 不输出的单行注释：只需要加上一个横杠。
+//
+  多行注释
+  带输出
+  只需要另起一行开始
+  写多少都可以
+//-
+  多行注释同样可以不带输出
+  多一个横杠
+  另起一行，缩进
+  随便写多少
+
+//-
+  标签
+  1. 标签名称后面直接写内容
+  2. pug 智能处理自闭合
+  3. 可以手动添加自闭合符，在 vue 中很有用
+
+p 标签名称后面直接写内容
+
+ul
+  li 无序1
+  li 无序2
+  li 无序3
+
+img(src='')
+
+//- 多个属性之间可以用空格分开
+a(href='www.baidu.com') 百度
+a(href='www.baidu.com' class='button') 百度
+
+//- 属性支持所有的 javascript 表达式
+p(class=isOK ? 'ok' : 'notok') 包含表达式的属性段落
+
+//- 属性可以分开多行书写
+input(
+  type='checkbox'
+  name='xuanze'
+  checked
+)
+
+//- 在属性中使用变量
+a(href='/' + url_short) 短链接
+a(href=url_long) 长链接
+//- 甚至可以在 ES6 以上环境中使用 `` 字符串
+a(href=`https://${url_long}/very_good.php`) ES6字符串方式
+
+//- 正常情况下，属性值自动转义
+//- 也可以使用 != 防止自动转义
+div(escaped='<code>') 属性自动转义
+div(unescape!='<code>') 属性不转义
+
+//- 布尔属性的写法，缺省为 true
+input(type='checkbox' checked)
+input(type='checkbox' checked=true)
+input(type='checkbox' checked=false)
+
+//- 样式属性可以是正常的字符串，也可以是对象
+p(style='color:red;background:green') 绿底红字，使用字符串
+p(style={color: 'yellow', background: 'blue'}) 蓝底黄子，使用对象
+
+//- 类属性可以是正常的字符串，也可以是数组
+p(class='foo bar baz') 字符串的类属性
+p(class=['foo', 'bar', 'baz']) 数组的类属性
+
+//- 当类名映射为布尔值的时候，可以用来判断条件属性
+p(class={ok: isOK}) 激活
+p(class={ok: !isOK}) 未激活
+
+//- 类和ID的字面量
+p.class01.class02 使用字面量的类属性
+p#my_id 使用字面量的ID属性
+
+//- 运行但不输出的代码
+- for (let i=0; i<3; i++)
+    li='item' + i
+
+p=1+1
