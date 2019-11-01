@@ -1,0 +1,1 @@
+declare function gLib(a: string): string

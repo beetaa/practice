@@ -4,10 +4,7 @@ var webpack = require('webpack')
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry: path.resolve(__dirname, 'src/pug/index.ts'),
-  node: {
-    fs: 'empty'
-  },
+  entry: path.resolve(__dirname, 'src/hello.ts'),
   module: {
     rules: [
       {

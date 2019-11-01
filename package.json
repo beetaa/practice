@@ -4,8 +4,11 @@
   "description": "personal techique practice",
   "main": "index.js",
   "scripts": {
-    "ts": "webpack-dev-server --config ./typescript/webpack.config.js",
-    "jest": "jest --config=./typescript/jest.config.js"
+    "hello": "webpack-dev-server --config ./webpack.common.js",
+    "typescript": "webpack-dev-server --config ./src/typescript/webpack.config.js",
+    "jest": "jest --config=./src/jest/jest.config.js",
+    "pug": "webpack-dev-server --config ./src/pug/webpack.config.js",
+    "cax": "webpack-dev-server --config ./src/cax/webpack.config.js"
   },
   "author": "zwm",
   "license": "ISC",
@@ -20,6 +23,7 @@
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }
