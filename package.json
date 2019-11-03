@@ -8,7 +8,8 @@
     "typescript": "webpack-dev-server --config ./src/typescript/webpack.config.js",
     "jest": "jest --config=./src/jest/jest.config.js",
     "pug": "webpack-dev-server --config ./src/pug/webpack.config.js",
-    "cax": "webpack-dev-server --config ./src/cax/webpack.config.js"
+    "cax": "webpack-dev-server --config ./src/cax/webpack.config.js",
+    "blockly": "webpack-dev-server --config ./src/blockly/webpack.config.js"
   },
   "author": "zwm",
   "license": "ISC",

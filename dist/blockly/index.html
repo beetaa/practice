@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 802px;
+      }
+      #runningDiv {
+        background: #EEE;
+        height: 20%;
+      }
+      #blocklyDiv {
+        background: #FFF;
+        height: 80%;
+      }
+    </style>
+    <title>Playground - Blockly</title>
+  </head>
+  <body>
+    <div id="runningDiv">>></div>
+    <div id="blocklyDiv"></div>
+
+    <!-- 最简单的 toolbox -->
+    <xml id="toolbox" style="display: none">
+      <block type="controls_if"></block>
+      <block type="logic_compare"></block>
+      <block type="math_number"></block>
+      <block type="text_print"></block>
+    </xml>
+
+    <!-- 包含简单非类的 toolbox -->
+    <xml id="toolbox-simple" style="display: none">
+      <category name="Control">
+        <block type="controls_if"></block>
+        <block type="controls_whileUntil"></block>
+        <block type="controls_for">
+      </category>
+      <category name="Logic">
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_boolean"></block>
+      </category>
+    </xml>
+    
+    
+  </body>
+  <!-- blockly 库 -->
+  <script src="lib/blockly_compressed.js"></script>
+  <script src="lib/blocks_compressed.js"></script>
+  <script src="theme/classic.js"></script>
+  <script src="theme/modern.js"></script>
+  <script src="lib/javascript_compressed.js"></script>
+  <script src="lib/msg/js/zh-hans.js"></script>
+  <!-- 测试代码 -->
+  <script src="bundle.js"></script>
+</html>
