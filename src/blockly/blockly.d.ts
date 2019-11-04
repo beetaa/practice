@@ -43,8 +43,8 @@ declare module Blockly {
         canvasTransitionLength: number;
     }
     var Themes: {
-      Classic?: Blockly.BlocklyTheme,
-      Mordern?: Blockly.BlocklyTheme
+      Classic?: Blockly.Theme,
+      Modern?: Blockly.Theme
     };
 }
 
@@ -111,7 +111,7 @@ declare module Blockly {
     css?: boolean;
     oneBasedIndex?: boolean;
     media?: string;
-    theme?: Blockly.BlocklyTheme;
+    theme?: Blockly.Theme;
     move?: {
       scrollbars?: boolean;
       drag?: boolean;
@@ -168,7 +168,7 @@ declare module Blockly {
         scrollbars?: boolean;
         sounds?: boolean;
         css?: boolean;
-        theme?: Blockly.BlocklyTheme;
+        theme?: Blockly.Theme;
         media?: string;
         horizontalLayout?: boolean;
         maxBlocks?: number;
@@ -200,7 +200,7 @@ declare module Blockly {
         toolboxOptions?: ToolboxOptions;
     }
     interface ToolboxOptions {
-        colour?: boolean;
+        color?: boolean;
         border?: boolean;
         inverted?: boolean;
         invertedMultiplier?: number;
@@ -13950,9 +13950,9 @@ declare module Blockly.Theme {
       */
     interface BlockStyle {
         colourPrimary: string;
-        colourSecondary: string;
-        colourTertiary: string;
-        hat: string
+        colourSecondary?: string;
+        colourTertiary?: string;
+        hat?: string
     }
 
     /**
@@ -13963,6 +13963,13 @@ declare module Blockly.Theme {
       */
     interface CategoryStyle {
         colour: string
+    }
+
+    /**
+     * setComponentStyle
+     */
+    interface setComponentStyle {
+      (component: string, value: string): void
     }
 }
 
