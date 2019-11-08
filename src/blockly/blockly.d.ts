@@ -42,10 +42,15 @@ declare module Blockly {
         // Center on block transition
         canvasTransitionLength: number;
     }
-    var Themes: {
+
+    const Themes: {
       Classic?: Blockly.Theme,
       Modern?: Blockly.Theme
-    };
+    }
+
+    const JavaScript: any
+
+    const Blocks: any
 }
 
 
